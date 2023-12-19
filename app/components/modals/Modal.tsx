@@ -18,14 +18,14 @@ interface ModalProps {
   secondaryActionLabel?: string;
 }
 
-const Modal: React.FC<ModalProps> = ({ 
-  isOpen, 
-  onClose, 
-  onSubmit, 
-  title, 
-  body, 
-  actionLabel, 
-  footer, 
+const Modal: React.FC<ModalProps> = ({
+  isOpen,
+  onClose,
+  onSubmit,
+  title,
+  body,
+  actionLabel,
+  footer,
   disabled,
   secondaryAction,
   secondaryActionLabel
@@ -40,7 +40,7 @@ const Modal: React.FC<ModalProps> = ({
     if (disabled) {
       return;
     }
-  
+
     setShowModal(false);
     setTimeout(() => {
       onClose();
@@ -157,7 +157,7 @@ const Modal: React.FC<ModalProps> = ({
               </div>
               {/*footer*/}
               <div className="flex flex-col gap-2 p-6">
-                <div 
+                <div
                   className="
                     flex 
                     flex-row 
@@ -167,20 +167,19 @@ const Modal: React.FC<ModalProps> = ({
                   "
                 >
                   {secondaryAction && secondaryActionLabel && (
-                    <Button 
-                      disabled={disabled} 
-                      label={secondaryActionLabel} 
-                      onClick={handleSecondaryAction}
+                    <Button
                       outline
-                    />  
+                      disabled={disabled}
+                      label={secondaryActionLabel}
+                      onClick={handleSecondaryAction}
+                    />
                   )}
-                  <Button 
-                    disabled={disabled} 
-                    label={actionLabel} 
+                  <Button
+                    disabled={disabled}
+                    label={actionLabel}
                     onClick={handleSubmit}
                   />
                 </div>
-                {footer}
               </div>
             </div>
           </div>
