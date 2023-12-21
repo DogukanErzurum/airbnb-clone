@@ -8,7 +8,7 @@ import useRegisterModal from '@/app/hooks/useRegisterModal';
 import useLoginModal from '@/app/hooks/useLoginModal';
 
 const UserMenu = () => {
-  const registerModal = useRegisterModal();
+  const registerModal = useRegisterModal();  
   const loginModal = useLoginModal();
   const [isOpen, setIsOpen] = useState(false);
 
